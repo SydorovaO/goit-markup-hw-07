@@ -43,8 +43,70 @@ img {
     list-style: none;
 }
 
+
+/**
+  |============================
+  | Container styles
+  |============================
+*/
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid tomato;
+}
+
+@media screen and (min-width:480px) {
+    .container{
+        width: 428px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .container{
+        width: 768px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container{
+        width: 1158px;
+    }
+}
+
+
+
+.logo {
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: var(--accent-color);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:768px) {
+    .logo{
+        line-height: 1.3;
+    }
+}
+
+
+.logo-header {
+    color: var(--title-color);}
+
+
+    .menu{ display: none;}
+    .contacts-box{display: none;}
+
 /*========================= COMPONENTS============================= */
-.visually-hidden {
+/* .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -97,15 +159,6 @@ img {
     cursor: pointer;
 }
 
-.logo {
-    color: var(--accent-color);
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
 
 .menu-link,
 .contacts-link {
@@ -158,9 +211,14 @@ img {
 .team-list-text,
 .portfolio-list-text {
     line-height: 1.5;
-}
+} */
+
+
 /* Social media links */
-.social-list,
+
+
+
+/* .social-list,
 .team-social-list {
     display: flex;
     justify-content: center;
@@ -185,10 +243,10 @@ img {
 .team-social-list-icon,
 .social-list-icon {
     fill: var(--color-cloud);
-}
+} */
 
 /* ==============================HEADER=================================== */
-.header {
+/* .header {
     border-bottom: 1px solid var(--color-cornflower);
 }
 .header-box {
@@ -197,10 +255,10 @@ img {
 
 .logo-header {
     color: var(--title-color);
-}
+} */
 
 /* ============Menu================ */
-.navigation {
+/* .navigation {
     display: flex;
     align-items: center;
 }
@@ -220,10 +278,10 @@ img {
 .menu-link:hover,
 .menu-link:focus {
     color: var(--hover-color);
-}
+} */
 
 /* ===========Contacts============== */
-.contacts-box{
+/* .contacts-box{
     margin-left: auto;
 }
 
@@ -240,10 +298,10 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
     color: var(--hover-color);
-}
+} */
 
 /* ===================================SECTION HERO============================= */
-.hero {
+/* .hero {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
@@ -285,10 +343,10 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--hover-color);
-}
+} */
 
 /* ================================SECTION OUR FEATURES========================= */
-.thumb{
+/* .thumb{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,20 +356,20 @@ img {
 }
 .features-list-item {
     flex-basis: calc((100%-72px)/4);
-}
+} */
 
 /* ================================SECTION OUR WORK============================= */
 
-.section.work {
+/* .section.work {
     padding-top: 0;
 }
 
 .work-list-item {
     flex-basis: calc((100%-48px)/3);
-}
+} */
 
 /* ================================SECTION OUR TEAM============================= */
-.section.team {
+/* .section.team {
     background-color: var(--color-cloud);
 }
 
@@ -345,9 +403,9 @@ img {
 .team-social-list-link:hover,
 .team-social-list-link:focus {
     background-color: var(--hover-color);
-}
+} */
 /* =======================================CUSTOMERS=========================== */
-.section.customers{
+/* .section.customers{
     padding-top: 130px;
 }
 
@@ -381,11 +439,11 @@ img {
 .customers-list-link:hover .customers-list-icon,
 .customers-list-link:focus .customers-list-icon{
     fill: var(--hover-color);
-}
+} */
 
 /* =======================================FOOTER=============================== */
 
-.footer{
+/* .footer{
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: var(--title-color);
@@ -437,11 +495,11 @@ img {
 .social-list-link:hover,
 .social-list-link:focus{
     background-color: #31D0AA;
-}
+} */
 
 /* ============Subscribe-form-field============== */
 
-.subscribe-text{
+/* .subscribe-text{
     margin-bottom: 16px;
 
     font-weight: 500;
@@ -504,11 +562,11 @@ img {
 
 .icon-airplane{
     fill: var(--white-color);
-}
+} */
 
 /* ======================================PORTFOLIO STYLES=========================== */
 
-.section.portfolio {
+/* .section.portfolio {
     padding-top: 96px;
 }
 
@@ -608,11 +666,11 @@ img {
 .portfolio-list-link:hover .overlay,
 .portfolio-list-link:focus .overlay{
     transform: translateY(0);
-}
+} */
 
  /* ===================================================MODAL WINDOW================================================== */
  
-.backdrop {
+/* .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -774,12 +832,12 @@ img {
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
-}
+} */
 
 
 /* fake checkbox */
 
-.modal-form-check-fake{
+/* .modal-form-check-fake{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -843,4 +901,4 @@ img {
     color: var(--white-color);
     cursor: pointer;
 }
-
+ */
