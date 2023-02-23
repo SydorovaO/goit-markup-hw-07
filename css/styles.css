@@ -105,6 +105,14 @@ img {
     .menu{ display: none;}
     .contacts-box{display: none;}
 
+    .mobile-menu-button{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+    }
+
+
 /*========================= COMPONENTS============================= */
 /* .visually-hidden {
     position: absolute;
