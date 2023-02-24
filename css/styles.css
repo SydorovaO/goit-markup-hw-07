@@ -76,7 +76,16 @@ img {
     }
 }
 
+/**
+  |=====================================================================
+  | HEDER STYLES
+  |=====================================================================
+*/
 
+.header-box {
+    display: flex;
+    align-items: center;
+}
 
 .logo {
     display: inline-block;
@@ -90,27 +99,195 @@ img {
     text-decoration: none;
     text-transform: uppercase;
 }
-
-@media screen and (min-width:768px) {
-    .logo{
-        line-height: 1.3;
-    }
-}
-
-
 .logo-header {
     color: var(--title-color);}
 
 
-    .menu{ display: none;}
-    .contacts-box{display: none;}
+.menu{
+    display: none;}
+.contacts-box{
+    display: none;}
 
-    .mobile-menu-button{
-        background-color: transparent;
-        border: none;
-        padding: 0;
 
+.mobile-menu-btn{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+}
+
+@media screen and (min-width:768px) {
+    .mobile-menu-btn{
+        display: none;
     }
+}
+
+/* Tablet styles */
+
+@media screen and (min-width:768px) {
+    .logo{
+        line-height: 1.3;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .navigation {
+        display: flex;
+        align-items: center;
+    }
+    .menu {
+        display: flex; 
+        margin-left: 120px;
+    }
+
+    .menu-item:not(:last-child)
+    {
+        margin-right: 40px; 
+    }
+    .menu-link{
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 22px;
+
+        color: var(--title-color);
+        font-weight: 500;
+        text-decoration: none;
+        line-height: 1.5;
+        transition: color var(--transition-dur-and-func);
+    }
+
+    .menu-link.current {
+        color: var(--hover-color);
+        position: relative;
+    }
+    .menu-link.current::after{
+        display: block;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: var(--hover-color);
+        border-radius: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .contacts-box{
+        display: block;
+        margin-left: auto;
+    }
+    .contacts-link{
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: var(--primary-text-color);
+        font-style: normal;
+        transition: color var(--transition-dur-and-func);
+    }
+    .contacts-link:hover,
+    .contacts-link:focus,
+    .menu-link:hover,
+    .menu-link:focus {
+        color: var(--hover-color);
+} 
+}
+
+/* Desktop styles */
+@media screen and (min-width:1200px){
+    .header {
+        border-bottom: 1px solid var(--color-cornflower);}
+
+    .menu {
+        margin-left: 76px;
+    }
+    .menu-link{
+        padding-bottom: 24px;
+    }
+
+    .contacts {
+        display: flex;
+    }
+    .contacts-item:not(:last-child) {
+        margin-right: 40px;}
+
+    .contacts-link{
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+}
+
+
+
+
+/* ==============================HEADER=================================== */
+/* 
+
+.header-box {
+    display: flex;
+}
+
+/* ===========Contacts============== */
+/* 
+
+
+
+
+/* .menu-link{
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    text-decoration: none;
+    line-height: 1.5;
+} */
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width:1200px) {
+    .menu {
+        display: flex; 
+        margin-left: 76px;
+    }
+} */
+
+
+    
+    
 
 
 /*========================= COMPONENTS============================= */
@@ -253,60 +430,7 @@ img {
     fill: var(--color-cloud);
 } */
 
-/* ==============================HEADER=================================== */
-/* .header {
-    border-bottom: 1px solid var(--color-cornflower);
-}
-.header-box {
-    display: flex;
-}
 
-.logo-header {
-    color: var(--title-color);
-} */
-
-/* ============Menu================ */
-/* .navigation {
-    display: flex;
-    align-items: center;
-}
-
-.menu {
-    display: flex; 
-    margin-left: 76px;
-}
-
-.menu-link {
-    color: var(--title-color);
-    font-weight: 500;
-
-    transition: color var(--transition-dur-and-func);
-}
-
-.menu-link:hover,
-.menu-link:focus {
-    color: var(--hover-color);
-} */
-
-/* ===========Contacts============== */
-/* .contacts-box{
-    margin-left: auto;
-}
-
-.contacts {
-    display: flex;
-}
-
-.contacts-link {
-    color: var(--primary-text-color);
-    font-style: normal;
-
-    transition: color var(--transition-dur-and-func);}
-
-.contacts-link:hover,
-.contacts-link:focus {
-    color: var(--hover-color);
-} */
 
 /* ===================================SECTION HERO============================= */
 /* .hero {
