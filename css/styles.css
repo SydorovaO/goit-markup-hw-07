@@ -43,6 +43,47 @@ img {
     list-style: none;
 }
 
+/**
+  |============================
+  | COMPONENTS
+  |============================
+*/
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+      }
+
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+  @media screen and (min-width: 1200px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+  }
+
 
 /**
   |============================
@@ -350,37 +391,10 @@ img {
 }
 
 
-
-
-/* ==============================HEADER=================================== */
-
-
-
-
-
-
-/* @media screen and (min-width:1200px) {
-    .menu {
-        display: flex; 
-        margin-left: 76px;
-    }
-} */
-
-
-    
-    
-
-
 /*========================= COMPONENTS============================= */
 
 
-/* .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;} */
+
 /*
 
     white-space: nowrap;
@@ -454,33 +468,9 @@ img {
     text-transform: capitalize;
 }
 
-.features-list,
-.work-list,
-.team-list {
-    display: flex;
-    gap: 24px;
-}
 
-.features-list-title,
-.team-list-title,
-.portfolio-list-title {
-    color: var(--title-color);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-}
 
-.team-list-title,
-.portfolio-list-title,
-.features-list-title {
-    margin-bottom: 8px;
-}
 
-.features-list-text,
-.team-list-text,
-.portfolio-list-text {
-    line-height: 1.5;
-} */
 
 
 /* Social media links */
@@ -572,42 +562,44 @@ img {
   }}
 
 
+  @media screen and (min-width: 768px){
+  .hero {
+    padding-bottom: 108px;}}
 
 
 
-
-
-
-
-
-
-/* .hero {
+    @media screen and (min-width: 1200px){
+        .hero {
     padding-top: 188px;
-    padding-bottom: 188px;
-    text-align: center;
+    padding-bottom: 188px;}}
 
-    max-width: 1440px;
-    margin-right: auto;
+
+.hero-title{
+    margin-bottom: 72px;
+    width: 320px;
+    font-size: 36px;
+    line-height: calc(40/36);
     margin-left: auto;
+    margin-right: auto;
+    text-transform: capitalize;
+    color: var(--white-color);}
 
-    
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: var(--title-color);} */
+    @media screen and (min-width: 768px){
+        .hero-title{
+    margin-bottom: 40px;
+    width: 496px;
+    font-size: 56px;
+    line-height: calc(60/56);
+    }} 
 
-.hero-title {
-    width: 494px;
+    @media screen and (min-width: 1200px){
+        .hero-title {
+    width: 496px;
     margin-bottom: 48px;
-    margin-left: auto;
-    margin-right: auto;
-
-    color: var(--white-color);
+    
     font-size: 56px;
     line-height: 1.07;
-}
+}}
 
 .hero-btn {
     padding: 16px 32px;
@@ -626,14 +618,10 @@ img {
 } 
 
 /* ================================SECTION OUR FEATURES========================= */
+
 .thumb{
     display: none;
 }
-
-
-
-
-
 
 @media screen and (min-width: 1200px){
     .thumb{
@@ -647,8 +635,85 @@ img {
 }
 
 
+
+
+.features-list-title,
+.team-list-title,
+.portfolio-list-title {
+    color: var(--title-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.team-list-title,
+.portfolio-list-title,
+.features-list-title {
+    margin-bottom: 8px;
+}
+
+
+
+.features-list-title{
+margin-bottom: 8px;
+font-weight: 700;
+font-size: 36px;
+line-height: calc(40/36);
+text-align: center;
+color: var(--title-color);}
+@media screen and (min-width: 768px){
+    .features-list-title{
+    text-align: start;
+    }
+    
+}
+@media screen and (min-width: 1200px){
+    .features-list-title,
+    .team-list-title,
+    .portfolio-list-title {
+    color: var(--title-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+    .team-list-title,
+    .portfolio-list-title{
+    margin-bottom: 8px;
+}}
+
+
+.features-list-text{
+    font-weight: 500;
+    line-height: 1.5;
+}
+@media screen and (min-width: 1200px){
+    .features-list-text{
+        font-weight: 400;}
+
+    .team-list-text,
+    .portfolio-list-text {
+        line-height: 1.5;
+
+}}
+.features-list-item:not(:last-child){
+    margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px){
+    .features-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .features-list-item {
+        flex-basis: calc((100%-24px)/2);
+    }
+}
+
+
+
+
 .features-list-item {
-    flex-basis: calc((100%-72px)/4);
+   
 }
 
 /* ================================SECTION OUR WORK============================= */
