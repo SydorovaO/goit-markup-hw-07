@@ -76,19 +76,34 @@ img {
     padding-top: 96px;
     padding-bottom: 96px;
 }
+/* стилі всюди однакові */
+.section-title {
+    margin-bottom: 72px;
+
+    color: var(--title-color);
+    font-size: 36px;
+    line-height: calc(40/36);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+
+
 
   @media screen and (min-width: 1200px) {
     .section {
         padding-top: 120px;
         padding-bottom: 120px;
     }
+
   }
 
 
 /**
-  |============================
+  |=========================================================
   | Container styles
-  |============================
+  |=========================================================
 */
 
 .container {
@@ -453,24 +468,6 @@ img {
     line-height: 1.5;
 }
 
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.section-title {
-    margin-bottom: 72px;
-
-    color: var(--title-color);
-    font-size: 36px;
-    line-height: 1.1;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-
-
-
 
 
 /* Social media links */
@@ -524,12 +521,17 @@ img {
     background-size: cover;
     background-color: var(--title-color);}
 
+    
     @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .box {
-    background-image: url(../images/hero/hero_mob@2x.jpg);
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero_mob@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--title-color);
   }
 }
 
@@ -537,27 +539,45 @@ img {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/hero_tab.jpg);
+        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--title-color);
     }
-    @media (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .box {
-      background-image: url(../images/hero/hero_tab@2x.jpg);
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero_tab@2x.jpg);
+      background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--title-color);
     }
   }}
   
+
+
   @media screen and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/hero_desk.jpg);
+        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--title-color);
     }
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .box {
-      background-image: url(../images/hero/hero_desk@2x.jpg);
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero_desk@2x.jpg);
+      background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--title-color);
     }
   }}
 
@@ -617,8 +637,13 @@ img {
     background-color: var(--hover-color);
 } 
 
-/* ================================SECTION OUR FEATURES========================= */
 
+
+/**
+  |================================================================================================
+  | SECTION OUR FEATURES
+  |================================================================================================
+*/
 .thumb{
     display: none;
 }
@@ -714,32 +739,40 @@ img {
         font-weight: 400;}
     }
 
-
-
-
-
-
-
-
-
-
-
-
- 
     /* .team-list-text,
     .portfolio-list-text {
         line-height: 1.5;} */
 
 
-/* ================================SECTION OUR WORK============================= */
 
-/* .section.work {
-    padding-top: 0;
+/**
+  |================================================================================================
+  | SECTION OUR WORK
+  |================================================================================================
+*/
+.section.work{
+    display: none;
 }
 
-.work-list-item {
-    flex-basis: calc((100%-48px)/3);
-} */
+@media screen and (min-width: 1200px){
+    .section.work {
+        display: block;
+        padding-top: 0;
+}
+    .work-list-item {
+        flex-basis: calc((100%-48px)/3);}
+    
+    
+        /* .features-list,
+        .team-list, */
+        .work-list {
+            display: flex;
+            gap: 24px;
+        }
+    }
+
+
+
 
 /* ================================SECTION OUR TEAM============================= */
 /* .section.team {
