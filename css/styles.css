@@ -110,7 +110,7 @@ img {
     fill: var(--color-cloud);
 } 
 
-.visually-hidden {
+  .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -262,6 +262,11 @@ img {
     text-decoration: none;
     color: var(--title-color)
 }
+
+.mobile-menu-link.current{
+    color: var(--accent-color);
+}
+
 .mobile-menu-item:not(:last-child){
     margin-bottom: 40px;
 }
