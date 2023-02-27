@@ -328,6 +328,7 @@ img {
 /* Mobile menu social links */
   .mobile-menu-list{
     display: flex;
+    flex-wrap: wrap;
     gap: 56px;
   }
   .mobile-menu-list-item{
@@ -358,11 +359,6 @@ img {
 /* Tablet styles */
 
 @media screen and (min-width:768px) {
-    .logo{
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    
     .navigation {
         display: flex;
         align-items: center;
@@ -428,7 +424,10 @@ img {
 }
 
 /* ===========================Desktop styles============================  */
-@media screen and (min-width:1200px){
+@media screen and (min-width: 1200px){
+    .logo{
+        padding-bottom: 28px;}
+
     .menu {
         margin-left: 76px;
     }
@@ -445,7 +444,7 @@ img {
 
     .contacts-link{
         padding-top: 24px;
-        padding-bottom: 24px;
+        padding-bottom: 28px;
 
         font-size: 16px;
         line-height: 1.5;
@@ -485,7 +484,7 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/hero_tab.jpg);
@@ -501,7 +500,7 @@ img {
   }}
   
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/hero_desk.jpg);
@@ -950,7 +949,9 @@ gap: 24px;
         margin-left: 0;
     margin-right: 24px;
     }
-
+    .social-list-title{
+        text-align: start;
+    }
     .social-links{
         margin-bottom: 0;
     }
@@ -1185,7 +1186,6 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     padding: 72px 16px 24px;
 
     width: 392px;
-    height: 586px;
     background-color: var(--modal-background-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -1196,6 +1196,13 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(1.2);
 }
+
+@media screen and (max-width: 400px) {
+    .modal {
+      width: 90%;
+    }
+    
+  }
 
 .modal-close-btn {
     position: absolute;
