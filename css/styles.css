@@ -153,6 +153,11 @@ img {
   |=====================================================================================================================
 */
 
+.header {
+    border-bottom: 1px solid var(--color-cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);}
+
+
 .header-box {
     display: flex;
     align-items: center;
@@ -257,7 +262,9 @@ img {
     font-size: 36px;
     line-height: calc(40/36);
     text-decoration: none;
-    color: var(--title-color)
+    color: var(--title-color);
+
+    transition: color var(--transition-dur-and-func);
 }
 
 .mobile-menu-link:hover,
@@ -295,6 +302,12 @@ img {
     line-height: calc(24/20);
     color: var(--primary-text-color);
 }
+
+.mobile-menu-contacts-tel,
+.mobile-menu-contacts-email{
+    transition: color var(--transition-dur-and-func);
+}
+
 .mobile-menu-contacts-tel:hover,
 .mobile-menu-contacts-tel:focus,
 .mobile-menu-contacts-email:hover,
@@ -415,9 +428,6 @@ img {
 
 /* ===========================Desktop styles============================  */
 @media screen and (min-width:1200px){
-    .header {
-        border-bottom: 1px solid var(--color-cornflower);}
-
     .menu {
         margin-left: 76px;
     }
@@ -986,6 +996,11 @@ gap: 24px;
 .section.portfolio{
     padding-top: 48px;
     padding-bottom: 48px;
+}
+
+.heder-portfolio{
+border-bottom: 1px solid var(--color-cornflower);
+box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .filter {
