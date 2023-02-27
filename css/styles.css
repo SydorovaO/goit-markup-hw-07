@@ -61,7 +61,6 @@ img {
 .section {
     padding-top: 96px;
     padding-bottom: 96px;
-    outline: 1px solid green;
 }
 @media screen and (min-width: 1200px) {
     .section {
@@ -133,7 +132,6 @@ img {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 1px solid tomato;
   }
   
   @media screen and (min-width: 768px) {
@@ -356,14 +354,12 @@ img {
         align-items: center;
     }
     .menu {
-        display: flex; 
+        display: flex;
+        gap: 40px; 
         margin-left: 120px;
     }
 
-    .menu-item:not(:last-child)
-    {
-        margin-right: 40px; 
-    }
+    
     .menu-link{
         display: block;
         padding-top: 24px;
@@ -405,6 +401,10 @@ img {
         font-style: normal;
         transition: color var(--transition-dur-and-func);
     }
+    .contacts-item:not(:last-child){
+        margin-bottom: 6px;
+    }
+
     .contacts-link:hover,
     .contacts-link:focus,
     .menu-link:hover,
@@ -422,14 +422,15 @@ img {
         margin-left: 76px;
     }
     .menu-link{
-        padding-bottom: 24px;
+        padding-bottom: 28px;
     }
 
     .contacts {
         display: flex;
     }
     .contacts-item:not(:last-child) {
-        margin-right: 40px;}
+        margin-right: 40px;
+        margin-bottom: 0}
 
     .contacts-link{
         padding-top: 24px;
@@ -527,11 +528,11 @@ img {
     color: var(--white-color);}
 
 /* Для екранів до 350px заголовок буде тягнутися */
-/* @media screen and (max-width: 350px){
+@media screen and (max-width: 350px){
     .hero-title{
-        max-width: 320px;
+        max-width: 100%;
     }
-} */
+}
 
     @media screen and (min-width: 768px){
         .hero-title{
@@ -543,11 +544,7 @@ img {
 
     @media screen and (min-width: 1200px){
         .hero-title {
-    width: 496px;
     margin-bottom: 48px;
-    
-    font-size: 56px;
-    line-height: 1.07;
 }}
 
 .hero-btn {
@@ -640,7 +637,6 @@ img {
     
     
     .features-list-title{
-    color: var(--title-color);
     font-weight: 500;
     font-size: 20px;
     line-height: calc(24/20);
@@ -837,7 +833,6 @@ gap: 24px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
-    outline: 1px solid tomato;
 }
 
 .footer-text {
@@ -960,9 +955,6 @@ gap: 24px;
     .subscribe-text{
         text-align: start;}
 
-    .footer-text {
-        width: 264px;
-    }
 }
 
 /* ===========================Desktop styles============================ */
@@ -1000,7 +992,7 @@ gap: 24px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 24px;
     margin-bottom: 48px;
 }
@@ -1024,6 +1016,7 @@ gap: 24px;
 .portfolio-list{
     display: flex;
     flex-wrap: wrap;
+    gap: 48px;
       
 }
 .portfolio-list-title {
@@ -1110,12 +1103,14 @@ gap: 24px;
             
 .filter {
     margin-bottom: 64px;
+    justify-content: center;
 }
 .filter-btn {
     padding: 12px 24px;}
 
 .portfolio-list{
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
 }
 .portfolio-list-item{
     flex-basis: calc((100% - 24px) / 2);
@@ -1375,6 +1370,13 @@ gap: 24px;
     letter-spacing: 0.04em;
     color: var(--white-color);
     cursor: pointer;
+    transition: background-color var(--transition-dur-and-func);
+    }
+
+    .modal-form-send:hover,
+    .modal-form-send:focus
+    {
+        background-color: var(--hover-color);
     }
  /* ===========================Tablet styles============================ */
 @media screen and (min-width: 768px){
